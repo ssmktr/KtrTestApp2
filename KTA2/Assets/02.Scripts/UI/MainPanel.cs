@@ -82,15 +82,19 @@ public class MainPanel : MonoBehaviour {
                 MessageLbl.text = "";
                 NativeManager.Instance.GoogleGetLeaderBoardScore(result =>
                 {
-                    UnityEngine.SocialPlatforms.IScore[] scoreArray = result;
-                    MessageLbl.text = scoreArray.Length.ToString() + "개 데이터 있음";
-                    if (scoreArray.Length > 0)
+                    foreach (UnityEngine.SocialPlatforms.IScore score in result)
                     {
-                        for (int i = 0; i < scoreArray.Length; ++i)
-                        {
-                            MessageLbl.text += string.Format("User Id : {0}, Value : {1}, Rank : {2}\n\n", scoreArray[i].userID, scoreArray[i].value, scoreArray[i].rank);
-                        }
+                        MessageLbl.text += string.Format("User Id : {0}, Value : {1}, Rank : {2}\n\n", score.userID, score.value, score.rank);
                     }
+                    //UnityEngine.SocialPlatforms.IScore[] scoreArray = result;
+                    //MessageLbl.text = scoreArray.Length.ToString() + "개 데이터 있음";
+                    //if (scoreArray.Length > 0)
+                    //{
+                    //    for (int i = 0; i < scoreArray.Length; ++i)
+                    //    {
+                    //        MessageLbl.text += string.Format("User Id : {0}, Value : {1}, Rank : {2}\n\n", scoreArray[i].userID, scoreArray[i].value, scoreArray[i].rank);
+                    //    }
+                    //}
                 });
             }
         };

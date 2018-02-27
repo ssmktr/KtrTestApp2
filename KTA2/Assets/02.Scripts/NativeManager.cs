@@ -62,7 +62,8 @@ public class NativeManager : Singleton<NativeManager>
         {
             MessageLbl.text = string.Format("User Id : {0}\nUser Name : {1}", GetGoogleId(), GetGoogleName());
             Profile.gameObject.SetActive(true);
-            Profile.sprite2D = Sprite.Create(Social.localUser.image, new Rect(0, 0, 128, 128), new Vector2());
+            //Profile.sprite2D = Sprite.Create(Social.localUser.image, new Rect(0, 0, 128, 128), new Vector2());
+            Profile.material.mainTexture = Social.localUser.image as Texture;
             Profile.MakePixelPerfect();
         }
     }

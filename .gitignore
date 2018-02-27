@@ -1,0 +1,10 @@
+Library/
+.vs/
+Temp/
+*.csproj
+*.sln
+eclipse/
+Assets/GEMS-MATCH3/Script/Editor/MemoryProfiler/
+Assets/GEMS-MATCH3/Script/Editor/MemoryProfiler.meta
+BuildAPK/
+UnityPackageManager/

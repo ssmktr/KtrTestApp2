@@ -37,63 +37,63 @@ public class MainPanel : MonoBehaviour {
             }
         };
 
-        //UIEventListener.Get(GoogleShowAchievementBtn).onClick = (sender) =>
-        //{
-        //    if (NativeManager.Instance.IsGoogleLogin)
-        //    {
-        //        NativeManager.Instance.GoogleShowAchievement();
-        //    }
-        //};
+        UIEventListener.Get(GoogleShowAchievementBtn).onClick = (sender) =>
+        {
+            if (NativeManager.Instance.IsGoogleLogin)
+            {
+                NativeManager.Instance.GoogleShowAchievement();
+            }
+        };
 
-        //UIEventListener.Get(GoogleUseAchievementBtn).onClick = (sender) =>
-        //{
-        //    if (NativeManager.Instance.IsGoogleLogin)
-        //    {
-        //        NativeManager.Instance.GoogleUseAchievement(100f, (result) =>
-        //        {
-        //            MessageLbl.text = result;
-        //        });
-        //    }
-        //};
+        UIEventListener.Get(GoogleUseAchievementBtn).onClick = (sender) =>
+        {
+            if (NativeManager.Instance.IsGoogleLogin)
+            {
+                NativeManager.Instance.GoogleUseAchievement(100f, (result) =>
+                {
+                    MessageLbl.text = result;
+                });
+            }
+        };
 
-        //UIEventListener.Get(GoogleShowLeaderBoardBtn).onClick = (sender) =>
-        //{
-        //    if (NativeManager.Instance.IsGoogleLogin)
-        //    {
-        //        NativeManager.Instance.GoogleShowLeaderBoard();
-        //    }
-        //};
+        UIEventListener.Get(GoogleShowLeaderBoardBtn).onClick = (sender) =>
+        {
+            if (NativeManager.Instance.IsGoogleLogin)
+            {
+                NativeManager.Instance.GoogleShowLeaderBoard();
+            }
+        };
 
-        //UIEventListener.Get(GoogleUseLeaderBoardBtn).onClick = (sender) =>
-        //{
-        //    if (NativeManager.Instance.IsGoogleLogin)
-        //    {
-        //        NativeManager.Instance.GoogleUseLeaderBoard((long)Random.Range(1, 100000), (result) =>
-        //        {
-        //            MessageLbl.text = result;
-        //        });
-        //    }
-        //};
+        UIEventListener.Get(GoogleUseLeaderBoardBtn).onClick = (sender) =>
+        {
+            if (NativeManager.Instance.IsGoogleLogin)
+            {
+                NativeManager.Instance.GoogleUseLeaderBoard((long)Random.Range(1, 100000), (result) =>
+                {
+                    MessageLbl.text = result;
+                });
+            }
+        };
 
-        //UIEventListener.Get(GoogleGetLeaderBoardScoreBtn).onClick = (sender) =>
-        //{
-        //    if (NativeManager.Instance.IsGoogleLogin)
-        //    {
-        //        MessageLbl.text = "";
-        //        NativeManager.Instance.GoogleGetLeaderBoardScore(result =>
-        //        {
-        //            UnityEngine.SocialPlatforms.IScore[] scoreArray = result;
-        //            MessageLbl.text = scoreArray.Length.ToString() + "개 데이터 있음";
-        //            if (scoreArray.Length > 0)
-        //            {
-        //                for (int i = 0; i < scoreArray.Length; ++i)
-        //                {
-        //                    MessageLbl.text += string.Format("User Id : {0}, Value : {1}, Rank : {2}\n\n", scoreArray[i].userID, scoreArray[i].value, scoreArray[i].rank);
-        //                }
-        //            }
-        //        });
-        //    }
-        //};
+        UIEventListener.Get(GoogleGetLeaderBoardScoreBtn).onClick = (sender) =>
+        {
+            if (NativeManager.Instance.IsGoogleLogin)
+            {
+                MessageLbl.text = "";
+                NativeManager.Instance.GoogleGetLeaderBoardScore(result =>
+                {
+                    UnityEngine.SocialPlatforms.IScore[] scoreArray = result;
+                    MessageLbl.text = scoreArray.Length.ToString() + "개 데이터 있음";
+                    if (scoreArray.Length > 0)
+                    {
+                        for (int i = 0; i < scoreArray.Length; ++i)
+                        {
+                            MessageLbl.text += string.Format("User Id : {0}, Value : {1}, Rank : {2}\n\n", scoreArray[i].userID, scoreArray[i].value, scoreArray[i].rank);
+                        }
+                    }
+                });
+            }
+        };
 
         UIEventListener.Get(FaceBookLoginBtn).onClick = (sender) =>
         {

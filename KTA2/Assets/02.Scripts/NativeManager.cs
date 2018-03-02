@@ -99,6 +99,9 @@ public class NativeManager : Singleton<NativeManager>
                 callback(string.Format("LEADERBOARD SCORE : {0} SUCCESS", score));
             else
                 callback(string.Format("LEADERBOARD SCORE : {0} FAIL", score));
+
+            if (Social.localUser.authenticated)
+                PlayGamesPlatform.Instance.ShowLeaderboardUI(GPGSIds.leaderboard_leaderboard_1);
         });
     }
 

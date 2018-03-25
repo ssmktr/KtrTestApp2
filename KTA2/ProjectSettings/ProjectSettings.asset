@@ -244,7 +244,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/ktr/KtrTestApp2/KTA2/ktrkey2.keystore
+  AndroidKeystoreName: D:/ktr/program/ssmktrUnity/KtrTestApp2/KTA2/ktrkey2.keystore
   AndroidKeyaliasName: ktrkey2
   AndroidTVCompatibility: 1
   AndroidIsGame: 1

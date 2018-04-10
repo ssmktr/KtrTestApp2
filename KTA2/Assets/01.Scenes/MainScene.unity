@@ -1484,18 +1484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d1e17f8c636f384cad367a027aea084, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GoogleLoginBtn: {fileID: 771527961}
-  GoogleLogoutBtn: {fileID: 191292007}
-  GoogleProfileBtn: {fileID: 1190943049}
-  GoogleShowAchievementBtn: {fileID: 1459798629}
-  GoogleUseAchievementBtn: {fileID: 88026799}
-  GoogleShowLeaderBoardBtn: {fileID: 540554433}
-  GoogleUseLeaderBoardBtn: {fileID: 1541348007}
-  GoogleGetLeaderBoardScoreBtn: {fileID: 432240987}
-  FaceBookLoginBtn: {fileID: 6456712}
-  FaceBookLogoutBtn: {fileID: 643638035}
-  FaceBookSetScoreBtn: {fileID: 1830923985}
-  FaceBookShowScoreBtn: {fileID: 2037883851}
+  FacebookLoginBtn: {fileID: 6456712}
+  FacebookLogoutBtn: {fileID: 643638035}
   Profile: {fileID: 1287339057}
   MessageLbl: {fileID: 1632513805}
 --- !u!114 &799886070

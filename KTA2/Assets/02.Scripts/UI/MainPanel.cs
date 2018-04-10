@@ -6,8 +6,16 @@ using TinyJSON;
 
 public class MainPanel : MonoBehaviour {
 
+    public GameObject FacebookLoginBtn, FacebookLogoutBtn;
+    public UI2DSprite Profile;
+    public UILabel MessageLbl;
+
     private void Awake()
     {
+        UIEventListener.Get(FacebookLoginBtn).onClick = OnClickFacebookLoginBtn;
+        UIEventListener.Get(FacebookLogoutBtn).onClick = OnClickFacebookLogoutBtn;
+
+        NativeManager.Instance.Init();
     }
 
     private void Start()
@@ -20,5 +28,13 @@ public class MainPanel : MonoBehaviour {
         {
             Application.Quit();
         }
+    }
+
+    void OnClickFacebookLoginBtn(GameObject sender)
+    {
+    }
+
+    void OnClickFacebookLogoutBtn(GameObject sender)
+    {
     }
 }

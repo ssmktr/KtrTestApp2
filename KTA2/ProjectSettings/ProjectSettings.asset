@@ -161,7 +161,7 @@ PlayerSettings:
     Android: com.ssmktr.ktrtestapp2
   buildNumber: {}
   AndroidBundleVersionCode: 3
-  AndroidMinSdkVersion: 23
+  AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 25
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -244,7 +244,7 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/ktr/program/ssmktrUnity/KtrTestApp2/KTA2/ktrkey2.keystore
+  AndroidKeystoreName: C:/ktr/KtrTestApp2/KTA2/ktrkey2.keystore
   AndroidKeyaliasName: ktrkey2
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -640,7 +640,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled: {}
-  facebookSdkVersion: 7.9.4
+  facebookSdkVersion: plugin
   apiCompatibilityLevel: 2
   cloudProjectId: 
   projectName: 

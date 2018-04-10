@@ -20,6 +20,8 @@ public class MainPanel : MonoBehaviour {
 
     private void Start()
     {
+        MessageLbl.text = "INIT";
+        Profile.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -32,9 +34,28 @@ public class MainPanel : MonoBehaviour {
 
     void OnClickFacebookLoginBtn(GameObject sender)
     {
+        NativeManager.Instance.FaceBookLogin(()=> 
+        {
+            NativeManager.Instance.GetUserFirstName((userName) => 
+            {
+                MessageLbl.text = userName;
+            });
+
+            NativeManager.Instance.GetProfile((sprite) => 
+            {
+                Profile.gameObject.SetActive(true);
+                Profile.sprite2D = sprite;
+                Profile.MakePixelPerfect();
+            });
+        });
     }
 
     void OnClickFacebookLogoutBtn(GameObject sender)
     {
+        NativeManager.Instance.FaceBookLogout(()=> 
+        {
+            MessageLbl.text = "Logout";
+            Profile.gameObject.SetActive(false);
+        });
     }
 }

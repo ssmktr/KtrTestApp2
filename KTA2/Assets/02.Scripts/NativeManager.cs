@@ -17,12 +17,6 @@ public class NativeManager : Singleton<NativeManager>
     System.Action<string> GetFaceBookFirstNameResult = null;
     System.Action<Sprite> GetFaceBookProfileResult = null;
 
-    public void FaceBookLogin(System.Action faceBookLoginCallBack)
-    {
-        FaceBookLoginCallBack = faceBookLoginCallBack;
-        
-    }
-
     void FaceBookInit()
     {
         if (FB.IsInitialized)
@@ -51,8 +45,18 @@ public class NativeManager : Singleton<NativeManager>
             Time.timeScale = 0;
     }
 
-    public void FaceBookLogin()
+    public void FaceBookLogout(System.Action callback)
     {
+        if (FB.IsLoggedIn)
+            FB.LogOut();
+
+        if (callback != null)
+            callback();
+    }
+
+    public void FaceBookLogin(System.Action faceBookLoginCallBack)
+    {
+        FaceBookLoginCallBack = faceBookLoginCallBack;
         List<string> perms = new List<string>() { "public_profile", "email", "user_friends" };
         FB.LogInWithReadPermissions(perms, AuthCllBack);
     }
@@ -66,9 +70,14 @@ public class NativeManager : Singleton<NativeManager>
             Debug.Log(aToken.UserId);
             foreach (string perm in aToken.Permissions)
                 Debug.Log(perm);
+
+            if (FaceBookLoginCallBack != null)
+                FaceBookLoginCallBack();
         }
         else
             Debug.Log("User cancelled login");
+
+        FaceBookLoginCallBack = null;
     }
 
     public void GetProfile(System.Action<Sprite> getFaceBookProfileResult)
